@@ -9,5 +9,7 @@ RUN apt-get update && apt-get -y upgrade && \
         apt-get clean && \
         rm -rf /var/lib/apt/lists/*
 
+RUN curl -L -s https://dot.net/v1/dotnet-install.sh | bash -s -- --channel 3.1
+
 ENTRYPOINT ["/ampstart.sh"]
 CMD []
